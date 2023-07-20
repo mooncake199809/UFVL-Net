@@ -29,3 +29,10 @@ python setup.py build_ext --inplace
 ```buildoutcfg
 pip install mmcv-full==1.5.0
 ```
+- Compile the ufvl-net as a package.
+```buildoutcfg
+cd ufvl_net
+pip install -e .
+cd .. 
+export PYTHONPATH=./ufvl_net/
+```
