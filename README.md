@@ -1,6 +1,6 @@
 # UFVL-Net
 This is the PyTorch implementation of our paper "UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenes".
-![overall]([https://raw.githubusercontent.com/DK-HU/EAAINet/main/assets/overall.png](https://github.com/mooncake199809/UFVL_Net/blob/main/assets/overall.png))
+![overall](https://github.com/mooncake199809/UFVL_Net/blob/main/assets/overall.png)
 
 ## Highlights
 - Once-for-multiple-scenes
