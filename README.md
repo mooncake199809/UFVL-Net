@@ -41,8 +41,8 @@ We utilize two standard datasets (i.e, 7-Scenes and 12-Scenes) to evaluate our m
 - 7-Scenes: The 7-Scenes dataset can be downloaded from [7-Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/).
 - 12-Scenes: The 12-Scenes dataset can be downloaded from [12-Scenes](https://graphics.stanford.edu/projects/reloc/).
 ## Model Zoo 
-For evaluation, we provide the checkpoints of 7-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1M4Knz3V-uGTSHUoxigZnlAiy3qMClJuE?usp=sharing). 
-For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1M4Knz3V-uGTSHUoxigZnlAiy3qMClJuE?usp=sharing). 
+For evaluation, we provide the checkpoints of 7-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1l4vWMz7mo49R1gMBxl932-DdavfhxiBO). 
+For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1Yw-DskJD7hCPo-WIXfPvHI5mP5UgRgJ9). 
 - Note: We integrate these models into a single one. You can do the evaluation following the description in *Quick Start - Test*).
 
 ## Quick Start
@@ -60,6 +60,10 @@ scene: the scene name that you want to test
 share_type: the type of weight sharing ("channel" or "kernel")
 data: the config of the dataset
 model: the config of the model
+```
+- If you want to test UFVL-Net-M with channel-wise sharing policy on the chess scene of 7-Scenes dataset, you need to modify the lines 8, 10, and 39 as "chess", "channel", and depth=34. Then, you could use the following command:
+```buildoutcfg
+python tools/test.py ./configs/7scenes/7scenes.py ./weights/34_channel_7scenes.pth --metrics accuracy
 ```
 
 
