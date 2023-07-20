@@ -45,4 +45,11 @@ For evaluation, we provide the checkpoints of 7-Scenes dataset in [Google Drive]
 For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1M4Knz3V-uGTSHUoxigZnlAiy3qMClJuE?usp=sharing). 
 - Note: We integrate these models into a single one. You can do the evaluation following the description in *Quick Start - Test*).
 
+## Quick Start
+
+We provide *Test* code of ViT-MVT as follows: 
+
+### Test
+To test our trained models, you need to put the downloaded model in `./weights`. After that you could use the following command to test the model.
+To test a specific model in a specific scene, you need to modify the config file in ./config/7scenes/7scenes.py or ./config/12scenes/12scenes.py
 
