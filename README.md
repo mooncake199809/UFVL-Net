@@ -36,3 +36,13 @@ pip install -e .
 cd .. 
 export PYTHONPATH=./ufvl_net/
 ```
+## Data Preparation
+We utilize two standard datasets (i.e, 7-Scenes and 12-Scenes) to evaluate our method.
+- 7-Scenes: The 7-Scenes dataset can be downloaded from [7-Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/).
+- 12-Scenes: The 12-Scenes dataset can be downloaded from [12-Scenes](https://graphics.stanford.edu/projects/reloc/).
+## Model Zoo 
+For evaluation, we provide the checkpoints of 7-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1M4Knz3V-uGTSHUoxigZnlAiy3qMClJuE?usp=sharing). 
+For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1M4Knz3V-uGTSHUoxigZnlAiy3qMClJuE?usp=sharing). 
+- Note: We integrate these models into a single one. You can do the evaluation following the description in *Quick Start - Test*).
+
+
