@@ -50,6 +50,16 @@ For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google 
 We provide *Test* code of ViT-MVT as follows: 
 
 ### Test
-To test our trained models, you need to put the downloaded model in `./weights`. After that you could use the following command to test the model.
+To test our trained models, you need to put the downloaded model in `./weights`.
 To test a specific model in a specific scene, you need to modify the config file in ./config/7scenes/7scenes.py or ./config/12scenes/12scenes.py
+The structure of the config file is described as follow:
+```buildoutcfg
+dataset_type: 'ufvl_net.SevenScenes' or 'ufvl_net.TWESCENES'
+root: the root path of the dataset
+scene: the scene name that you want to test
+share_type: the type of weight sharing ("channel" or "kernel")
+data: the config of the dataset
+model: the config of the model
+```
+
 
