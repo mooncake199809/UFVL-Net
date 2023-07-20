@@ -5,7 +5,7 @@ _base_ = [
 dataset_type = 'ufvl_net.SevenScenes'
 # root='/home/dk/SCORE_Methods/EAAINet/data/'
 root='/home/dk/SCORE_Methods/EAAINet/data/'
-scene='heads'
+scene='chess'
 all_scene = ['chess', 'fire', 'heads', 'pumpkin', 'redkitchen', 'office', 'stairs']
 share_type = "channel"          # channel or kernel
 
@@ -36,7 +36,7 @@ model = dict(
     type='ufvl_net.FDANET',
     backbone=dict(
         type='SEResNet',
-        depth=18,
+        depth=34,
         stem_channels=16,
         expansion = 1,
         strides=(1, 1, 2, 2),
