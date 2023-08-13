@@ -56,7 +56,7 @@ For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google 
 
 ## Quick Start
 
-We provide *Test* code of ViT-MVT as follows: 
+We provide *Test* code of UFVL-Net as follows: 
 
 ### Test
 To test our trained models, you need to put the downloaded model in `./weights`.
