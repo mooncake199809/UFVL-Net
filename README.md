@@ -13,7 +13,7 @@ Both OFVL-MS and UFVL-Net optimize visual localization tasks of various scenes c
 Both OFVL-MS and UFVL-Net deliver extraordinary performances on two benchmarks and complex real scenes. We demonstrate that once the training for our methods are done, our methods can generalize to new scenes with much fewer parameters by freezing the task-shared parameters.
 
 # OFVL-MS
-
+The code is coming soon.
 
 # UFVL-Net
 ## Environment Setup
