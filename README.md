@@ -1,5 +1,5 @@
 # Realizing visual localization across multiple scenes
-This is the PyTorch implementation of our paper
+This is the PyTorch implementation of our paper \<br>
 (1) "OFVL-MS: Once for Visual Localization across Multiple Indoor Scenes" 
 (2) "UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenes".
 ![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/overall.png)
