@@ -6,10 +6,10 @@ This is the PyTorch implementation of our paper
 ![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/overall.png)
 
 ## Highlights
-- Once-for-multiple-scenes
+- Once-for-multiple-scenes.
 Both OFVL-MS and UFVL-Net optimize visual localization tasks of various scenes collectively using a multi-task learning manner,  which challenges the conventional wisdom that SCoRe typically trains a separate model for each scene. OFVL-MS realizes layer-wise parameters sharing, while UFVL-Net realizes channel-wise and kernel-wise sharing polices.
 
-- Competive performance
+- Competive performance.
 Both OFVL-MS and UFVL-Net deliver extraordinary performances on two benchmarks and complex real scenes. We demonstrate that once the training for our methods are done, our methods can generalize to new scenes with much fewer parameters by freezing the task-shared parameters.
 
 # OFVL-MS
