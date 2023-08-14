@@ -1,4 +1,4 @@
-# Visual localization across multiple scenes
+# Visual localization with SCoRE methods
 This is the PyTorch implementation of our paper  
 (1) "OFVL-MS: Once for Visual Localization across Multiple Indoor Scenes"  (ICCV2023 accept)
 ![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/OFVL_overall.png)
