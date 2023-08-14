@@ -1,13 +1,21 @@
-# UFVL-Net
-This is the PyTorch implementation of our paper "UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenes".
+# Visual localization across multiple scenes
+This is the PyTorch implementation of our paper  
+(1) "OFVL-MS: Once for Visual Localization across Multiple Indoor Scenes"  (ICCV2023 accept)
+![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/OFVL_overall.png)
+(2) "UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenes".
+![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/overall.png)
 
 ## Highlights
-- Once-for-multiple-scenes
-UFVL-Net optimizes visual localization tasks of various scenes collectively using a multi-task learning manner, which challenges the conventional wisdom that SCoRe typically trains a separate model for each scene. 
+- Once-for-multiple-scenes.
+Both OFVL-MS and UFVL-Net optimize visual localization tasks of various scenes collectively using a multi-task learning manner,  which challenges the conventional wisdom that SCoRe typically trains a separate model for each scene. OFVL-MS realizes layer-wise parameters sharing, while UFVL-Net realizes channel-wise and kernel-wise sharing polices.
 
-- Competive performance
-UFVL-Net delivers extraordinary performances on two benchmarks and complex real scenes. We demonstrate that once the training for UFVL-Net is done, UFVL-Net can generalize to new scenes with much fewer parameters by freezing the task-shared parameters.
+- Competive performance.
+Both OFVL-MS and UFVL-Net deliver extraordinary performances on two benchmarks and complex real scenes. We demonstrate that once the training for our methods are done, our methods can generalize to new scenes with much fewer parameters by freezing the task-shared parameters.
 
+# OFVL-MS
+The code is coming soon.
+
+# UFVL-Net
 ## Environment Setup
 To set up the enviroment you can easily run the following command:
 - Create environment
@@ -40,6 +48,7 @@ export PYTHONPATH=./ufvl_net/
 We utilize two standard datasets (i.e, 7-Scenes and 12-Scenes) to evaluate our method.
 - 7-Scenes: The 7-Scenes dataset can be downloaded from [7-Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/).
 - 12-Scenes: The 12-Scenes dataset can be downloaded from [12-Scenes](https://graphics.stanford.edu/projects/reloc/).
+- LIVL: The real-world  LIVL dataset can be downloaded from [RealWorld-Scenes](https://drive.google.com/drive/folders/1rHILFijnb8wfQiT-5gWLvDJWbOqHMZwx).
 ## Model Zoo 
 For evaluation, we provide the checkpoints of 7-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1l4vWMz7mo49R1gMBxl932-DdavfhxiBO). 
 For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1Yw-DskJD7hCPo-WIXfPvHI5mP5UgRgJ9). 
@@ -47,7 +56,7 @@ For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google 
 
 ## Quick Start
 
-We provide *Test* code of ViT-MVT as follows: 
+We provide *Test* code of UFVL-Net as follows: 
 
 ### Test
 To test our trained models, you need to put the downloaded model in `./weights`.
