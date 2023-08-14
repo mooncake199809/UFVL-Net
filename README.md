@@ -53,10 +53,7 @@ Specifically, we utilize the ROS system to record RGB images and aligned depth i
 For each scene, four sequences are recorded, in which three sequences are used for training and one sequence for testing. 
 
 ![](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/laser_image.png)
-K544: a room spanning about $12 \times 9 m^{2}$ with $3109$ images for training and $1112$ images for testing. 
-
-Floor5: a hall spanning about $12 \times 5 m^{2}$ with $2694$ images for training and $869$ images for testing. 
-
-Parking lot1: a parking lot spanning about $8 \times 6 m^{2}$ with $2294$ images for training and $661$ images for testing. 
-
-Parking lot2: a parking lot spanning about $8 \times 8 m^{2}$ with $2415$ images for training and $875$ images for testing.
+- K544: a room spanning about $12 \times 9 m^{2}$ with $3109$ images for training and $1112$ images for testing. 
+- Floor5: a hall spanning about $12 \times 5 m^{2}$ with $2694$ images for training and $869$ images for testing. 
+- Parking lot1: a parking lot spanning about $8 \times 6 m^{2}$ with $2294$ images for training and $661$ images for testing. 
+- Parking lot2: a parking lot spanning about $8 \times 8 m^{2}$ with $2415$ images for training and $875$ images for testing.
