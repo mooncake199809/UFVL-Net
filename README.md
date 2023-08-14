@@ -52,16 +52,14 @@ The dataset is available at [here](https://drive.google.com/drive/folders/1rHILF
 Specifically, we utilize the ROS system to record RGB images and aligned depth images with corresponding timestamp $T_{1}$, Furthermore, we obtain point clouds with timestamp $T_{2}$ provided by VLP-16 laser radar. Then, we generate final RGB-D images and corresponding point clouds through aligning $T_{1}$ and $T_{2}$. Ultimately, We utilize the LiDAR-based SLAM system A-LOAM to compute the ground truth pose.  
 For each scene, four sequences are recorded, in which three sequences are used for training and one sequence for testing. 
 
-![centering](./assets/Room.png)
+![](https://github.com/mooncake199809/UFVL-Net/tree/main/assets/Room.png)
 Scene (i): a room spanning about $12 \times 9 m^{2}$ with $3109$ images for training and $1112$ images for testing. 
 
-![](./assets/Hall.png) 
+![](https://github.com/mooncake199809/UFVL-Net/tree/main/assets/Hall.png) 
 Scene (ii): a hall spanning about $12 \times 5 m^{2}$ with $2694$ images for training and $869$ images for testing. 
 
-![](./assets/Parking_lot1.png)
+![](https://github.com/mooncake199809/UFVL-Net/tree/main/assets/Parking_lot1.png)
 Scene (iii): a parking lot spanning about $8 \times 6 m^{2}$ with $2294$ images for training and $661$ images for testing. 
 
-![](./assets/Parking_lot2.png)
+![](https://github.com/mooncake199809/UFVL-Net/tree/main/assets/Parking_lot2.png)
 Scene (iv): a parking lot spanning about $8 \times 8 m^{2}$ with $2415$ images for training and $875$ images for testing.
-
-
