@@ -1,9 +1,9 @@
 # Visual localization with SCoRE methods
-This is the PyTorch implementation of our paper  
-(1) "OFVL-MS: Once for Visual Localization across Multiple Indoor Scenes"  (ICCV2023 accept)
-![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/OFVL_overall.png)
-(2) "UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenes".
-![overall](https://github.com/mooncake199809/UFVL-Net/blob/main/assets/overall.png)
+*** This is a collection of our visual localization frameworks. 
+
+> [**OFVL-MS**](./configs/ofvl_ms) (```@ICCV'23```): **OFVL-MS: Once for Visual Localization across Multiple Indoor Scenes**
+
+> [**UFVL-Net**](./configs/ufvl_net) (```TIM23```): **UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenesss**
 
 ## Highlights
 - Once-for-multiple-scenes.
@@ -12,10 +12,6 @@ Both OFVL-MS and UFVL-Net optimize visual localization tasks of various scenes c
 - Competive performance.
 Both OFVL-MS and UFVL-Net deliver extraordinary performances on two benchmarks and complex real scenes. We demonstrate that once the training for our methods are done, our methods can generalize to new scenes with much fewer parameters by freezing the task-shared parameters.
 
-# OFVL-MS
-The code is coming soon.
-
-# UFVL-Net
 ## Environment Setup
 To set up the enviroment you can easily run the following command:
 - Create environment
@@ -49,30 +45,15 @@ We utilize two standard datasets (i.e, 7-Scenes and 12-Scenes) to evaluate our m
 - 7-Scenes: The 7-Scenes dataset can be downloaded from [7-Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/).
 - 12-Scenes: The 12-Scenes dataset can be downloaded from [12-Scenes](https://graphics.stanford.edu/projects/reloc/).
 - LIVL: The real-world  LIVL dataset can be downloaded from [RealWorld-Scenes](https://drive.google.com/drive/folders/1rHILFijnb8wfQiT-5gWLvDJWbOqHMZwx).
-## Model Zoo 
-For evaluation, we provide the checkpoints of 7-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1l4vWMz7mo49R1gMBxl932-DdavfhxiBO). 
-For evaluation, we also provide the checkpoints of 12-Scenes dataset in [Google Drive](https://drive.google.com/drive/folders/1Yw-DskJD7hCPo-WIXfPvHI5mP5UgRgJ9). 
-- Note: We integrate these models into a single one. You can do the evaluation following the description in *Quick Start - Test*).
 
-## Quick Start
-
-We provide *Test* code of UFVL-Net as follows: 
-
-### Test
-To test our trained models, you need to put the downloaded model in `./weights`.
-To test a specific model in a specific scene, you need to modify the config file in ./config/7scenes/7scenes.py or ./config/12scenes/12scenes.py
-The structure of the config file is described as follow:
-```buildoutcfg
-dataset_type: 'ufvl_net.SevenScenes' or 'ufvl_net.TWESCENES'
-root: the root path of the dataset
-scene: the scene name that you want to test
-share_type: the type of weight sharing ("channel" or "kernel")
-data: the config of the dataset
-model: the config of the model
-```
-- If you want to test UFVL-Net-M with channel-wise sharing policy on the chess scene of 7-Scenes dataset, you need to modify the lines 8, 10, and 39 as "chess", "channel", and depth=34. Then, you could use the following command:
-```buildoutcfg
-python tools/test.py ./configs/7scenes/7scenes.py ./weights/34_channel_7scenes.pth --metrics accuracy
-```
+## LIVL Dataset
+LIVL dataset collection equipment contains a mobile chassis, a RealSense D435 camera, and a VLP-16 laser radar. LIVL dataset records RGB-D images and corresponding camera poses of four different indoor environments. 
+The dataset is available at [here](https://drive.google.com/drive/folders/1rHILFijnb8wfQiT-5gWLvDJWbOqHMZwx).
+Specifically, we utilize the ROS system to record RGB images and aligned depth images with corresponding timestamp $T_{1}$, Furthermore, we obtain point clouds with timestamp $T_{2}$ provided by VLP-16 laser radar. Then, we generate final RGB-D images and corresponding point clouds through aligning $T_{1}$ and $T_{2}$. Ultimately, We utilize the LiDAR-based SLAM system A-LOAM to compute the ground truth pose.  
+For each scene, four sequences are recorded, in which three sequences are used for training and one sequence for testing. 
+Scene (i) (./assets/Room.png): a room spanning about $12 \times 9 m^{2}$ with $3109$ images for training and $1112$ images for testing. 
+Scene (ii) (./assets/Hall.png): a hall spanning about $12 \times 5 m^{2}$ with $2694$ images for training and $869$ images for testing. 
+Scene (iii) (./assets/Parking lot1.png): a parking lot spanning about $8 \times 6 m^{2}$ with $2294$ images for training and $661$ images for testing. 
+Scene (iv) (./assets/Parking lot2.png): a parking lot spanning about $8 \times 8 m^{2}$ with $2415$ images for training and $875$ images for testing.
 
 
