@@ -3,7 +3,7 @@
 
 > [**OFVL-MS**](./configs/ofvl_ms) (```@ICCV'23```): **OFVL-MS: Once for Visual Localization across Multiple Indoor Scenes**
 
-> [**UFVL-Net**](./configs/ufvl_net) (````@TIM'23```): **UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenesss**
+> [**UFVL-Net**](./configs/ufvl_net) (```@TIM'23```): **UFVL-Net: A Unified Framework for Visual Localization across Multiple Indoor Scenesss**
 
 ## Highlights
 - Once-for-multiple-scenes.
