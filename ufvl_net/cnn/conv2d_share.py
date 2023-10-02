@@ -122,7 +122,7 @@ class BinarizerFn(torch.autograd.Function):
         return outputs
 
     @staticmethod
-    def backward(self, gradOutput):
+    def backward(ctx, gradOutput):
         return gradOutput, None
 
 
